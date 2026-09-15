@@ -43,9 +43,8 @@
 </form>
 
 
-  <!-- Script -->
+  <!-- SCRIPT -->
   <script>
-
     //Id = Pega todos os elemetos pelo id
 const city = document.getElementById("search-city");
 const btn = document.getElementById("btn");
@@ -108,5 +107,129 @@ const searchWeather = async () => {
 btn.addEventListener("click", searchWeather);
   </script>
 
+
+<!--CSS-->
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+    background-color: rgb(0, 119, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: none;
+    border-radius: 10px;
+    height: auto;
+    width: clamp(1rem, 15.8rem, 20rem);
+    background-color: white;
+    padding: 0 0 0 7px;
+   
+   
+}
+
+#container input{
+
+    height: clamp(1rem, 1rem, 10rem);
+    width: clamp(1rem, 10rem, 10rem);
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    margin: auto;
+}
+
+#container #btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: auto;
+    height: 19px;
+    width: 1rem;
+    background: white;
+}
+
+#container #weather{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: clamp(1rem, 12.5rem, 15rem);
+    height: clamp(1rem, 5rem, 10rem);
+    border-radius: 5px;
+    background: rgb(42, 145, 255);
+}
+
+#container #temp{
+    display: flex;
+    border: solid 1px;
+    font-size: clamp(10px, 17.9px, 100px);
+    width: clamp(1rem, 6rem, 10rem);
+    height: clamp(1rem, 3.5rem, 10rem);
+    border-radius: 5px;
+}
+
+#container #feels-value{
+
+   display: flex;
+    border: solid 1px;
+    font-size: clamp(10px, 18.9px, 100px);
+    width: clamp(1rem, 6rem, 10rem);
+    height: clamp(1rem, 3.5rem, 10rem);
+    border-radius: 5px;
+}
+
+#container #humidity-value{
+
+   display: flex;
+    border: solid 1px;
+    font-size: clamp(10px, 17.9px, 100px);
+    width: clamp(1rem, 6rem, 10rem);
+    height: clamp(1rem, 3.5rem, 10rem);
+    border-radius: 5px;
+}
+
+#container #wind-value{
+
+    display: flex;
+    border: solid 1px;
+    font-size: clamp(10px, 18.9px, 100px);
+    width: clamp(1rem, 6rem, 10rem);
+    height: clamp(1rem, 3.5rem, 10rem);
+    border-radius: 5px;
+}
+
+#result{
+    gap: 10px;
+    padding: 0.3rem;
+    flex-wrap: wrap;
+
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+</style>
 </body>
 </html>
