@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Previsão do Tempo</title>
+  <title>Previsão do Tempo Online | Clima em Tempo Real</title><link data-seo="true" href="./" rel="canonical"/>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -13,37 +13,37 @@
 
    <form id="container">
     <i class="fa-solid fa-location-dot"></i>
-  <input 
-    type="text" 
-    id="search-city" 
-    placeholder="Digite a cidade ou país"
-  >
+ <input 
+ aria-label="Digite o nome da cidade ou país" 
+ autocomplete="address-level2" 
+ id="search-city" 
+ name="city" 
+ placeholder="Digite a cidade ou país" type="text"/>
 
   <button id="btn" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
 
 
   <!-- Resultado = Mostra o resultado da pesquisa-->
    <div id="result">
-  <h2 id="cityName"></h2>
+  <h2 id="cityName" aria-live="polite"></h2>
 
   <div id="weather">
   <p id="weather-value"></p>
- <img id="weather-icon" alt="Ícone do clima" style="display: none;">
+ <img alt="Ícone representando a condição meteorológica atual" decoding="async" height="100" id="weather-icon" loading="lazy" style="display: none;" width="100"/>
 </div>
 
 <div id="temp">
 
-<p id="temp-value"></p>
+ <p aria-label="Temperatura atual" id="temp-value"></p>
 </div>
 
-  <p id="feels-value"></p>
-  <p id="humidity-value"></p>
-  <p id="wind-value"></p>
+  <p aria-label="Sensação térmica" id="feels-value"></p>
+  <p aria-label="Umidade" id="humidity-value"></p>
+  <p aria-label="Velocidade do vento" id="wind-value"></p>
 </div>
 </form>
 
 
-  <!-- SCRIPT -->
   <script>
     //Id = Pega todos os elemetos pelo id
 const city = document.getElementById("search-city");
@@ -106,7 +106,6 @@ const searchWeather = async () => {
 
 btn.addEventListener("click", searchWeather);
   </script>
-
 
 <!--CSS-->
 <style>
